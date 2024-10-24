@@ -37,18 +37,12 @@ class AppCoordinator: NSObject, Coordinator {
         self.application = application
         self.navigationController = navigationController
         self.window = window
+        
+        self.window.backgroundColor = .black
+        self.navigationController.view.backgroundColor = .red
 
         super.init()
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
-    }
-    
-    func start(launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) {
-//        protectionCoordinator.didFinishLaunchingWithOptions()
-//        application.start(launchOptions: launchOptions)
-//
-//        walletApiCoordinator.delegate = application
-//        addCoordinator(walletApiCoordinator)
-//        addCoordinator(walletConnectCoordinator)
     }
 }

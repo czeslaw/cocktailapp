@@ -91,3 +91,18 @@ enum Images {
         return UIImage(named: "backWhite")
     }
 }
+
+enum AnimationDurations {
+    static var fastAnimationDuration: TimeInterval {
+        return 0.23
+    }
+    static var shortAnimationDuration: TimeInterval {
+        return 0.35
+    }
+    static var mediumAnimationDuration: TimeInterval {
+        return 0.65
+    }
+    static var longAnimationDuration: TimeInterval {
+        return 0.85
+    }
+}

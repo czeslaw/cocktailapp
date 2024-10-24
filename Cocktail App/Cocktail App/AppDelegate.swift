@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.application = Application.shared
         
         appCoordinator = AppCoordinator.create(application: self.application)
-        appCoordinator.start(launchOptions: launchOptions)
         
         return true
     }
