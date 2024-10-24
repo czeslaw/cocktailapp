@@ -9,11 +9,17 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    private var appCoordinator: AppCoordinator!
+    private var application: Application!
 
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+    func application(_ application: UIApplication, 
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        self.application = Application.shared
+        
+        appCoordinator = AppCoordinator.create(application: self.application)
+        appCoordinator.start(launchOptions: launchOptions)
+        
         return true
     }
 

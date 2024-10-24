@@ -16,6 +16,20 @@
 		31DBD1282CCA2D8300AC5F17 /* Cocktail_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1272CCA2D8300AC5F17 /* Cocktail_AppTests.swift */; };
 		31DBD1322CCA2D8300AC5F17 /* Cocktail_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1312CCA2D8300AC5F17 /* Cocktail_AppUITests.swift */; };
 		31DBD1342CCA2D8300AC5F17 /* Cocktail_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1332CCA2D8300AC5F17 /* Cocktail_AppUITestsLaunchTests.swift */; };
+		31DBD1432CCA38D600AC5F17 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1422CCA38D600AC5F17 /* HomeCoordinator.swift */; };
+		31DBD1462CCA39A900AC5F17 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1452CCA39A900AC5F17 /* Coordinator.swift */; };
+		31DBD1482CCA3A4700AC5F17 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1472CCA3A4700AC5F17 /* HomeViewController.swift */; };
+		31DBD14A2CCA3A6E00AC5F17 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1492CCA3A6E00AC5F17 /* HomeViewModel.swift */; };
+		31DBD14C2CCA3B2100AC5F17 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD14B2CCA3B2100AC5F17 /* Configuration.swift */; };
+		31DBD14F2CCA3D5100AC5F17 /* ScreenChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD14E2CCA3D5100AC5F17 /* ScreenChecker.swift */; };
+		31DBD1512CCA40DE00AC5F17 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1502CCA40DE00AC5F17 /* AppCoordinator.swift */; };
+		31DBD1542CCA413100AC5F17 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1532CCA413100AC5F17 /* Application.swift */; };
+		31DBD1562CCA427600AC5F17 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1552CCA427600AC5F17 /* Dependencies.swift */; };
+		31DBD1582CCA429900AC5F17 /* DrinksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1572CCA429900AC5F17 /* DrinksService.swift */; };
+		31DBD15A2CCA452200AC5F17 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1592CCA452200AC5F17 /* AppStyle.swift */; };
+		31DBD15C2CCA45AF00AC5F17 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD15B2CCA45AF00AC5F17 /* UIColor+.swift */; };
+		31DBD15E2CCA485D00AC5F17 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD15D2CCA485D00AC5F17 /* UIImage+.swift */; };
+		31DBD1602CCA4B7700AC5F17 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD15F2CCA4B7700AC5F17 /* UINavigationController+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +63,20 @@
 		31DBD12D2CCA2D8300AC5F17 /* Cocktail AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cocktail AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DBD1312CCA2D8300AC5F17 /* Cocktail_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail_AppUITests.swift; sourceTree = "<group>"; };
 		31DBD1332CCA2D8300AC5F17 /* Cocktail_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		31DBD1422CCA38D600AC5F17 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		31DBD1452CCA39A900AC5F17 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		31DBD1472CCA3A4700AC5F17 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		31DBD1492CCA3A6E00AC5F17 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		31DBD14B2CCA3B2100AC5F17 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		31DBD14E2CCA3D5100AC5F17 /* ScreenChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenChecker.swift; sourceTree = "<group>"; };
+		31DBD1502CCA40DE00AC5F17 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		31DBD1532CCA413100AC5F17 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		31DBD1552CCA427600AC5F17 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		31DBD1572CCA429900AC5F17 /* DrinksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksService.swift; sourceTree = "<group>"; };
+		31DBD1592CCA452200AC5F17 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
+		31DBD15B2CCA45AF00AC5F17 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		31DBD15D2CCA485D00AC5F17 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		31DBD15F2CCA4B7700AC5F17 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +127,10 @@
 		31DBD10F2CCA2D8000AC5F17 /* Cocktail App */ = {
 			isa = PBXGroup;
 			children = (
+				31DBD1442CCA399B00AC5F17 /* Common */,
+				31DBD1412CCA385E00AC5F17 /* Home */,
 				31DBD1102CCA2D8000AC5F17 /* AppDelegate.swift */,
+				31DBD1502CCA40DE00AC5F17 /* AppCoordinator.swift */,
 				31DBD1122CCA2D8000AC5F17 /* SceneDelegate.swift */,
 				31DBD1142CCA2D8000AC5F17 /* ViewController.swift */,
 				31DBD1162CCA2D8000AC5F17 /* Main.storyboard */,
@@ -125,6 +156,49 @@
 				31DBD1332CCA2D8300AC5F17 /* Cocktail_AppUITestsLaunchTests.swift */,
 			);
 			path = "Cocktail AppUITests";
+			sourceTree = "<group>";
+		};
+		31DBD1412CCA385E00AC5F17 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				31DBD1422CCA38D600AC5F17 /* HomeCoordinator.swift */,
+				31DBD1472CCA3A4700AC5F17 /* HomeViewController.swift */,
+				31DBD1492CCA3A6E00AC5F17 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		31DBD1442CCA399B00AC5F17 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				31DBD1522CCA412300AC5F17 /* Services */,
+				31DBD14D2CCA3D4700AC5F17 /* Misc */,
+				31DBD1452CCA39A900AC5F17 /* Coordinator.swift */,
+				31DBD14B2CCA3B2100AC5F17 /* Configuration.swift */,
+				31DBD1592CCA452200AC5F17 /* AppStyle.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		31DBD14D2CCA3D4700AC5F17 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				31DBD14E2CCA3D5100AC5F17 /* ScreenChecker.swift */,
+				31DBD15B2CCA45AF00AC5F17 /* UIColor+.swift */,
+				31DBD15D2CCA485D00AC5F17 /* UIImage+.swift */,
+				31DBD15F2CCA4B7700AC5F17 /* UINavigationController+.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		31DBD1522CCA412300AC5F17 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				31DBD1532CCA413100AC5F17 /* Application.swift */,
+				31DBD1552CCA427600AC5F17 /* Dependencies.swift */,
+				31DBD1572CCA429900AC5F17 /* DrinksService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +332,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31DBD1602CCA4B7700AC5F17 /* UINavigationController+.swift in Sources */,
+				31DBD1562CCA427600AC5F17 /* Dependencies.swift in Sources */,
 				31DBD1152CCA2D8000AC5F17 /* ViewController.swift in Sources */,
+				31DBD1432CCA38D600AC5F17 /* HomeCoordinator.swift in Sources */,
+				31DBD1542CCA413100AC5F17 /* Application.swift in Sources */,
+				31DBD1512CCA40DE00AC5F17 /* AppCoordinator.swift in Sources */,
+				31DBD15E2CCA485D00AC5F17 /* UIImage+.swift in Sources */,
+				31DBD14A2CCA3A6E00AC5F17 /* HomeViewModel.swift in Sources */,
+				31DBD1462CCA39A900AC5F17 /* Coordinator.swift in Sources */,
+				31DBD1582CCA429900AC5F17 /* DrinksService.swift in Sources */,
 				31DBD1112CCA2D8000AC5F17 /* AppDelegate.swift in Sources */,
+				31DBD15A2CCA452200AC5F17 /* AppStyle.swift in Sources */,
 				31DBD1132CCA2D8000AC5F17 /* SceneDelegate.swift in Sources */,
+				31DBD14C2CCA3B2100AC5F17 /* Configuration.swift in Sources */,
+				31DBD1482CCA3A4700AC5F17 /* HomeViewController.swift in Sources */,
+				31DBD14F2CCA3D5100AC5F17 /* ScreenChecker.swift in Sources */,
+				31DBD15C2CCA45AF00AC5F17 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,10 +534,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Cocktail App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,10 +564,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Cocktail App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
