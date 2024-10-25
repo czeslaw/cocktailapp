@@ -29,6 +29,8 @@
 		31DBD15C2CCA45AF00AC5F17 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD15B2CCA45AF00AC5F17 /* UIColor+.swift */; };
 		31DBD15E2CCA485D00AC5F17 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD15D2CCA485D00AC5F17 /* UIImage+.swift */; };
 		31DBD1602CCA4B7700AC5F17 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD15F2CCA4B7700AC5F17 /* UINavigationController+.swift */; };
+		31DBD1A02CCBDAE200AC5F17 /* VCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD19F2CCBDAE200AC5F17 /* VCViewModel.swift */; };
+		31DBD1A22CCBDD2200AC5F17 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1A12CCBDD2200AC5F17 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		31DBD15B2CCA45AF00AC5F17 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		31DBD15D2CCA485D00AC5F17 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
 		31DBD15F2CCA4B7700AC5F17 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
+		31DBD19F2CCBDAE200AC5F17 /* VCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCViewModel.swift; sourceTree = "<group>"; };
+		31DBD1A12CCBDD2200AC5F17 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +177,8 @@
 				31DBD1452CCA39A900AC5F17 /* Coordinator.swift */,
 				31DBD14B2CCA3B2100AC5F17 /* Configuration.swift */,
 				31DBD1592CCA452200AC5F17 /* AppStyle.swift */,
+				31DBD19F2CCBDAE200AC5F17 /* VCViewModel.swift */,
+				31DBD1A12CCBDD2200AC5F17 /* BaseViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -332,6 +338,7 @@
 				31DBD1562CCA427600AC5F17 /* Dependencies.swift in Sources */,
 				31DBD1152CCA2D8000AC5F17 /* SplashViewController.swift in Sources */,
 				31DBD1432CCA38D600AC5F17 /* HomeCoordinator.swift in Sources */,
+				31DBD1A22CCBDD2200AC5F17 /* BaseViewController.swift in Sources */,
 				31DBD1542CCA413100AC5F17 /* Application.swift in Sources */,
 				31DBD1512CCA40DE00AC5F17 /* AppCoordinator.swift in Sources */,
 				31DBD15E2CCA485D00AC5F17 /* UIImage+.swift in Sources */,
@@ -339,6 +346,7 @@
 				31DBD1462CCA39A900AC5F17 /* Coordinator.swift in Sources */,
 				31DBD1582CCA429900AC5F17 /* DrinksService.swift in Sources */,
 				31DBD1112CCA2D8000AC5F17 /* AppDelegate.swift in Sources */,
+				31DBD1A02CCBDAE200AC5F17 /* VCViewModel.swift in Sources */,
 				31DBD15A2CCA452200AC5F17 /* AppStyle.swift in Sources */,
 				31DBD1132CCA2D8000AC5F17 /* SceneDelegate.swift in Sources */,
 				31DBD14C2CCA3B2100AC5F17 /* Configuration.swift in Sources */,

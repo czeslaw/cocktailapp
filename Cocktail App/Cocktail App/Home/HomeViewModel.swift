@@ -7,6 +7,8 @@
 
 import UIKit
 
-class HomeViewModel {
-    var backgroundColor: UIColor = Configuration.Color.defaultViewBackground
+class HomeViewModel: VCViewModel {
+    var hidesBackButton: Bool {
+        true
+    }
 }

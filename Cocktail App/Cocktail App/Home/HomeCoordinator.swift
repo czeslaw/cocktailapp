@@ -9,8 +9,6 @@ import Foundation
 import UIKit
 
 protocol HomeCoordinatorDelegate: AnyObject {
-    
-    
 }
 
 class HomeCoordinator: Coordinator {
@@ -25,28 +23,37 @@ class HomeCoordinator: Coordinator {
     }
     
     private lazy var rootViewController: HomeViewController = {
-        let viewController = HomeViewController()
+        let viewController = HomeViewController(viewModel: HomeViewModel())
         viewController.delegate = self
         return viewController
     }()
     
     private lazy var splashViewController: SplashViewController = {
-        let viewController = SplashViewController()
+        let viewController = SplashViewController(viewModel: BaseViewModel())
         viewController.delegate = self
         return viewController
     }()
     
     func start() {
+        presentSplashVC()
+    }
+    
+    func presentSplashVC() {
+        navigationController.setNavigationBarHidden(true, animated: false)
         navigationController.setViewControllers([splashViewController], animated: true)
+    }
+    
+    func presentHomeVC() {
+        navigationController.setViewControllers([rootViewController], animated: true)
+        navigationController.setNavigationBarHidden(false, animated: true)
     }
 }
 
 extension HomeCoordinator: HomeViewControllerDelegate {
-
 }
 
 extension HomeCoordinator: SplashViewControllerDelegate {
     func didFinishAnimating() {
-        navigationController.pushViewController(rootViewController, animated: true)
+        presentHomeVC()
     }
 }

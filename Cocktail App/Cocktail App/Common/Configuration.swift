@@ -63,7 +63,7 @@ enum Configuration {
  
         private static let mainTint = UIColor(r: 250, g: 90, b: 40, a: 1)
         private static let separatorColor = UIColor.gray
-        private static let backgroundMainTheme = UIColor.blue
+        private static let backgroundMainTheme = UIColor.white
         private static let mine = UIColor(r: 227, g: 132, b: 222, a: 1)
     }
 

@@ -10,31 +10,6 @@ import UIKit
 protocol HomeViewControllerDelegate: AnyObject {
 }
 
-class HomeViewController: UIViewController {
-    private var viewModel: HomeViewModel
+class HomeViewController: BaseViewController {
     weak var delegate: HomeViewControllerDelegate?
-
-    init(viewModel: HomeViewModel = .init()) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-    }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        generateSubviews(viewModel: viewModel)
-        configure(viewModel: viewModel)
-    }
-
-    required init?(coder: NSCoder) {
-        return nil
-    }
-
-    func configure(viewModel: HomeViewModel) {
-        self.viewModel = viewModel
-        view.backgroundColor = viewModel.backgroundColor
-    }
-
-    private func generateSubviews(viewModel: HomeViewModel) {
-        
-    }
 }

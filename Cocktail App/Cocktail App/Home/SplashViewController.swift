@@ -11,7 +11,7 @@ protocol SplashViewControllerDelegate: AnyObject {
     func didFinishAnimating()
 }
 
-class SplashViewController: UIViewController {
+class SplashViewController: BaseViewController {
     
     private var imageView: UIImageView = {
         let imageView = UIImageView(image: Images.logotype)
@@ -41,21 +41,21 @@ class SplashViewController: UIViewController {
                                               multiplier: 1,
                                               constant: 0))
         view.addConstraint(NSLayoutConstraint(item: imageView,
-                                              attribute: NSLayoutConstraint.Attribute.leadingMargin,
+                                              attribute: NSLayoutConstraint.Attribute.leading,
                                               relatedBy: NSLayoutConstraint.Relation.equal,
                                               toItem: view,
-                                              attribute: NSLayoutConstraint.Attribute.leadingMargin,
+                                              attribute: NSLayoutConstraint.Attribute.leading,
                                               multiplier: 1,
                                               constant: 96))
         view.addConstraint(NSLayoutConstraint(item: imageView,
-                                              attribute: NSLayoutConstraint.Attribute.trailingMargin,
+                                              attribute: NSLayoutConstraint.Attribute.trailing,
                                               relatedBy: NSLayoutConstraint.Relation.equal,
                                               toItem: view,
-                                              attribute: NSLayoutConstraint.Attribute.trailingMargin,
+                                              attribute: NSLayoutConstraint.Attribute.trailing,
                                               multiplier: 1,
                                               constant: -96))
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
