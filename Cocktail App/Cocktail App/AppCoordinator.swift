@@ -15,10 +15,11 @@ class AppCoordinator: NSObject, Coordinator {
     
     var coordinators: [Coordinator] = []
     
-    static func create(application: Application) -> AppCoordinator {
+    static func create(application: Application, windowScene: UIWindowScene) -> AppCoordinator {
         applyStyle()
 
-        let window = UIWindow(frame: UIScreen.main.bounds)
+        let window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window.windowScene = windowScene
         let navigationController: UINavigationController = .withOverridenBarAppearence()
         navigationController.view.backgroundColor = Configuration.Color.defaultViewBackground
 
@@ -37,9 +38,6 @@ class AppCoordinator: NSObject, Coordinator {
         self.application = application
         self.navigationController = navigationController
         self.window = window
-        
-        self.window.backgroundColor = .black
-        self.navigationController.view.backgroundColor = .red
 
         super.init()
         window.rootViewController = navigationController
