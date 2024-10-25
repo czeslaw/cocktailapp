@@ -8,33 +8,25 @@
 import UIKit
 
 class AppCoordinator: NSObject, Coordinator {
-    
     private let application: Application
     private let window: UIWindow
     let navigationController: UINavigationController
     
     var coordinators: [Coordinator] = []
     
-    static func create(application: Application, windowScene: UIWindowScene) -> AppCoordinator {
-        applyStyle()
-
+    private lazy var homeCoordinator: HomeCoordinator = {
+        let homeCoordinator = HomeCoordinator(navigationController: navigationController)
+        return homeCoordinator
+    }()
+    
+    init(application: Application,
+         windowScene: UIWindowScene) {
+        
         let window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window.windowScene = windowScene
         let navigationController: UINavigationController = .withOverridenBarAppearence()
         navigationController.view.backgroundColor = Configuration.Color.defaultViewBackground
-
-        let coordinator = AppCoordinator(
-            window: window,
-            navigationController: navigationController,
-            application: application)
-
-        return coordinator
-    }
-    
-    init(window: UIWindow,
-         navigationController: UINavigationController,
-         application: Application) {
-
+        
         self.application = application
         self.navigationController = navigationController
         self.window = window
@@ -42,5 +34,10 @@ class AppCoordinator: NSObject, Coordinator {
         super.init()
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
+    }
+
+    func start(launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil) {
+        addCoordinator(homeCoordinator)
+        homeCoordinator.start()
     }
 }

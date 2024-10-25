@@ -13,9 +13,49 @@ protocol SplashViewControllerDelegate: AnyObject {
 
 class SplashViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
+    private var imageView: UIImageView = {
+        let imageView = UIImageView(image: Images.logotype)
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     weak var delegate: SplashViewControllerDelegate?
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        view.addSubview(imageView)
+        view.addConstraint(NSLayoutConstraint(item: imageView,
+                                              attribute: NSLayoutConstraint.Attribute.centerY,
+                                              relatedBy: NSLayoutConstraint.Relation.equal,
+                                              toItem: view,
+                                              attribute: NSLayoutConstraint.Attribute.centerY,
+                                              multiplier: 1,
+                                              constant: 0))
+        view.addConstraint(NSLayoutConstraint(item: imageView,
+                                              attribute: NSLayoutConstraint.Attribute.width,
+                                              relatedBy: NSLayoutConstraint.Relation.equal,
+                                              toItem: imageView,
+                                              attribute: NSLayoutConstraint.Attribute.height,
+                                              multiplier: 1,
+                                              constant: 0))
+        view.addConstraint(NSLayoutConstraint(item: imageView,
+                                              attribute: NSLayoutConstraint.Attribute.leadingMargin,
+                                              relatedBy: NSLayoutConstraint.Relation.equal,
+                                              toItem: view,
+                                              attribute: NSLayoutConstraint.Attribute.leadingMargin,
+                                              multiplier: 1,
+                                              constant: 96))
+        view.addConstraint(NSLayoutConstraint(item: imageView,
+                                              attribute: NSLayoutConstraint.Attribute.trailingMargin,
+                                              relatedBy: NSLayoutConstraint.Relation.equal,
+                                              toItem: view,
+                                              attribute: NSLayoutConstraint.Attribute.trailingMargin,
+                                              multiplier: 1,
+                                              constant: -96))
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 

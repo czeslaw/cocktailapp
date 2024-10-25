@@ -29,8 +29,24 @@ class HomeCoordinator: Coordinator {
         viewController.delegate = self
         return viewController
     }()
+    
+    private lazy var splashViewController: SplashViewController = {
+        let viewController = SplashViewController()
+        viewController.delegate = self
+        return viewController
+    }()
+    
+    func start() {
+        navigationController.setViewControllers([splashViewController], animated: true)
+    }
 }
 
 extension HomeCoordinator: HomeViewControllerDelegate {
 
+}
+
+extension HomeCoordinator: SplashViewControllerDelegate {
+    func didFinishAnimating() {
+        navigationController.pushViewController(rootViewController, animated: true)
+    }
 }

@@ -9,14 +9,35 @@ import UIKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    func application(_ application: UIApplication, 
+    private var application: Application!
+    private var appCoordinator: AppCoordinator!
+    var windowScene: UIWindowScene? {
+        didSet {
+            start()
+        }
+    }
+    
+    func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
+        
         return true
+    }
+    
+    func start() {
+        guard let scene = windowScene else {
+            return
+        }
+        
+        self.application = Application.shared
+        self.appCoordinator = AppCoordinator(application: self.application,
+                                             windowScene: scene)
+
+        applyStyle()
+        appCoordinator.start()
     }
 
     // MARK: UISceneSession Lifecycle
-
+    
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
 
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)

@@ -8,15 +8,16 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-    private var appCoordinator: AppCoordinator!
-    private var application: Application!
+    var appCoordinator: AppCoordinator!
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        guard let windowScene = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene),
+              let appDelegate = (UIApplication.shared.delegate as? AppDelegate) else {
+            return
+        }
         
-        application = Application.shared
-        appCoordinator = AppCoordinator.create(application: application, windowScene: windowScene)
+        appDelegate.windowScene = windowScene
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

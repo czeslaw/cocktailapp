@@ -90,6 +90,9 @@ enum Images {
     static var backWhite: UIImage? {
         return UIImage(named: "backWhite")
     }
+    static var logotype: UIImage? {
+        return UIImage(named: "logotype")
+    }
 }
 
 enum AnimationDurations {
