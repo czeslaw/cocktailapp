@@ -11,13 +11,16 @@ func applyStyle() {
     UIBarButtonItem.appearance(whenContainedInInstancesOf: [UIDocumentBrowserViewController.self]).tintColor = Configuration.Color.navigationBarButtonItemTint
     UIWindow.appearance().tintColor = Configuration.Color.appTint
 
-    UINavigationBar.appearance().shadowImage = UIImage(color: Configuration.Color.navigationBarSeparator, size: CGSize(width: 0.25, height: 0.35))
+    UINavigationBar.appearance().shadowImage = UIImage(color: Configuration.Color.navigationBarSeparator, 
+                                                       size: CGSize(width: 0.25, height: 0.35))
     UINavigationBar.appearance().compactAppearance = UINavigationBarAppearance.defaultAppearence
     UINavigationBar.appearance().standardAppearance = UINavigationBarAppearance.defaultAppearence
     UINavigationBar.appearance().scrollEdgeAppearance = UINavigationBarAppearance.defaultAppearence
 
     //We could have set the backBarButtonItem with an empty title for every view controller. Using appearance here, while a hack is still more convenient though, since we don't have to do it for every view controller instance
-    UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -200, vertical: 0), for: .default)
+    UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -200,
+                                                                               vertical: 0),
+                                                                      for: .default)
     UIBarButtonItem.appearance().tintColor = Configuration.Color.navigationBarButtonItemTint
     UIBarButtonItem.appearance(whenContainedInInstancesOf: [UIToolbar.self]).tintColor = Configuration.Color.navigationBarButtonItemTint
 

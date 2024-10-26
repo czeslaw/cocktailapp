@@ -9,14 +9,16 @@ import Foundation
 import Combine
 
 class Application {
+    let environment: Configuration.Environment
     let dependencies: Dependencies
     
     static let shared: Application = {
         Application()
     }()
     
-    init() {
-        dependencies = Application.dependencies(with: Configuration.Environment.dev)
+    init(environment: Configuration.Environment = .dev) {
+        self.environment = .dev
+        self.dependencies = Application.dependencies(with: environment)
     }
 }
 

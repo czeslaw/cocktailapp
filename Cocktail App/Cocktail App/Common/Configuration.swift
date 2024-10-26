@@ -23,6 +23,17 @@ enum Configuration {
         case dev
         case prod
         case xctests
+
+        var rootURL: String {
+            switch self {
+            case .dev:
+                return "https://www.thecocktaildb.com/api/json/v1/1/"
+            case .prod:
+                return "https://www.thecocktaildb.com/api/json/v1/1/"
+            case .xctests:
+                return "https://www.thecocktaildb.com/api/json/v1/1/"
+            }
+        }
     }
 
     enum Color {
@@ -55,7 +66,7 @@ enum Configuration {
             return colorFrom(trait: trait, lightColor: .black, darkColor: .white)
         }
         static let searchBarTint = UIColor { trait in
-            return colorFrom(trait: trait, lightColor: mine, darkColor: .white)
+            return colorFrom(trait: trait, lightColor: mainTint, darkColor: .white)
         }
         static let tableViewSeparator = UIColor { trait in
             return colorFrom(trait: trait, lightColor: separatorColor, darkColor: separatorColor)
@@ -117,11 +128,14 @@ enum CollectionViewStylingType {
     case drink
     
     var styling: CollectionViewStyling {
-        return CollectionViewStyling(inset: 5,
-                                     minimumLineSpacing: 5,
-                                     minimumInteritemSpacing: 5,
-                                     cellsPerRow: 3,
-                                     itemHeight: 240)
+        switch self {
+        case .drink:
+            return CollectionViewStyling(inset: 5,
+                                         minimumLineSpacing: 5,
+                                         minimumInteritemSpacing: 5,
+                                         cellsPerRow: ScreenChecker.isIPad ? 7 : 3,
+                                         itemHeight: ScreenChecker.isIPad ? 300 : 180)
+        }
     }
     
     struct CollectionViewStyling {

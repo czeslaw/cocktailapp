@@ -24,6 +24,10 @@ class HomeViewModel: VCViewModel {
         true
     }
     
+    var title: String {
+        return "Home"
+    }
+    
     init(drinksService: DrinksService) {
         self.drinksService = drinksService
     }

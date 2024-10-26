@@ -16,5 +16,12 @@ class DrinkSearchViewController: UICollectionViewController {
         collectionViewManager.setup(collectionView: collectionView)
         collectionView?.backgroundColor = .white
     }
+    
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        
+        collectionViewManager.collectionView?.reloadData()
+    }
 }
 

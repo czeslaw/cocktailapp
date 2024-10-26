@@ -18,7 +18,8 @@ class DrinkCollectionViewCell: UICollectionViewCell, Reusable {
     var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = Configuration.Font.text
+        label.font = Configuration.Font.title
+        label.textAlignment = .center
         label.textColor = Configuration.Color.defaultTextColor
         label.numberOfLines = 2
         return label
@@ -87,7 +88,7 @@ class DrinkCollectionViewCell: UICollectionViewCell, Reusable {
                                          relatedBy: NSLayoutConstraint.Relation.equal,
                                          toItem: self,
                                          attribute: NSLayoutConstraint.Attribute.height,
-                                         multiplier: 0.35,
+                                         multiplier: 0.2,
                                          constant: 0))
     }
     

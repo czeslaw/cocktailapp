@@ -52,6 +52,10 @@ class HomeCoordinator: Coordinator {
 }
 
 extension HomeCoordinator: HomeViewControllerDelegate {
+    func onSelect(dring: Drink) {
+        //todo: push drink details vc
+    }
+    
 }
 
 extension HomeCoordinator: SplashViewControllerDelegate {

@@ -9,20 +9,20 @@ import UIKit
 import Combine
 
 protocol HomeViewControllerDelegate: AnyObject {
+    func onSelect(dring: Drink)
 }
 
 class HomeViewController: BaseViewController {
     private var cancelables = Set<AnyCancellable>()
     private let onDrinkSearchTextChange = PassthroughSubject<String, Never>()
     let searchController = UISearchController(searchResultsController: DrinkSearchViewController(collectionViewLayout: UICollectionViewFlowLayout()))
-    var drinkSearchTask: URLSessionTask?
 
     weak var delegate: HomeViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        searchController.searchBar.placeholder = "Search Drinks"
+        searchController.searchBar.placeholder = "Search for Drinks"
         searchController.searchResultsUpdater = self
         (searchController.searchResultsController as? DrinkSearchViewController)?.collectionViewManager.delegate = self
         navigationItem.searchController = searchController
@@ -34,9 +34,17 @@ class HomeViewController: BaseViewController {
         
         let output = (viewModel as! HomeViewModel).transform(input: input)
         
-        output.viewState.sink(receiveValue: { [unowned self] state in
-            print("dsadsa\(self)")
-            print("dsadsa\(state)")
+        output.viewState
+            .receive(on: RunLoop.main)
+            .sink(receiveValue: { [unowned self] state in
+                self.searchController.searchBar.isLoading = false
+                switch state {
+                case .success(let drinks):
+                    (searchController.searchResultsController as? DrinkSearchViewController)?.collectionViewManager.drinks = drinks
+                case .failure(let error):
+                    (searchController.searchResultsController as? DrinkSearchViewController)?.collectionViewManager.drinks = []
+                    print("error\(error)")
+                }
         }).store(in: &cancelables)
     }
 }
@@ -45,7 +53,6 @@ extension HomeViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         guard let drinkSearchText = searchController.searchBar.text?.trimmingCharacters(in: .whitespacesAndNewlines) else { return }
 
-        drinkSearchTask?.cancel()
         guard !drinkSearchText.isEmpty else {
             (searchController.searchResultsController as? DrinkSearchViewController)?.collectionViewManager.drinks = []
             searchController.searchBar.isLoading = false
@@ -55,25 +62,11 @@ extension HomeViewController: UISearchResultsUpdating {
         searchController.searchBar.isLoading = true
 
         onDrinkSearchTextChange.send(drinkSearchText)
-        
-        
-//        drinkSearchTask = DrinkApi.SearchMovies(titleSearch: drinkSearchText).request(completion: { (outcome) in
-//            switch outcome {
-//            case .success(let movieThumbNails):
-//                searchController.searchBar.isLoading = false
-//                (searchController.searchResultsController as? MovieSearchViewController)?.collectionViewManager.thumbNails = movieThumbNails
-//            case .failure(let error):
-//                guard let networkResponseError = error as? NetworkResponse, networkResponseError != .cancelled else { return }
-//                searchController.searchBar.isLoading = false
-//                (searchController.searchResultsController as? MovieSearchViewController)?.collectionViewManager.thumbNails = []
-//            }
-//        })
     }
 }
 
 extension HomeViewController: DrinkSearchCollectionViewManagerDelegate {
     func selected(drink: Drink) {
-//        movieSearchTask?.cancel()
-//        performSegue(withIdentifier: MovieDetailViewController.segueId, sender: movieThumbNail)
+        delegate?.onSelect(dring: drink)
     }
 }
