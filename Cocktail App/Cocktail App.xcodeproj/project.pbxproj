@@ -7,15 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3134A5662CCCEB1800FBCD9C /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5652CCCEB1800FBCD9C /* Reusable.swift */; };
+		3134A5682CCCF38000FBCD9C /* UISearchBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5672CCCF38000FBCD9C /* UISearchBar+.swift */; };
+		3134A5742CCCFCD100FBCD9C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5732CCCFCD100FBCD9C /* NetworkService.swift */; };
+		3134A5782CCD12F200FBCD9C /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5772CCD12F200FBCD9C /* Resource.swift */; };
+		3134A57A2CCD131E00FBCD9C /* Publisher+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5792CCD131E00FBCD9C /* Publisher+.swift */; };
 		31DBD1112CCA2D8000AC5F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1102CCA2D8000AC5F17 /* AppDelegate.swift */; };
 		31DBD1132CCA2D8000AC5F17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1122CCA2D8000AC5F17 /* SceneDelegate.swift */; };
-		31DBD1152CCA2D8000AC5F17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1142CCA2D8000AC5F17 /* ViewController.swift */; };
-		31DBD1182CCA2D8000AC5F17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31DBD1162CCA2D8000AC5F17 /* Main.storyboard */; };
+		31DBD1152CCA2D8000AC5F17 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1142CCA2D8000AC5F17 /* SplashViewController.swift */; };
 		31DBD11A2CCA2D8300AC5F17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31DBD1192CCA2D8300AC5F17 /* Assets.xcassets */; };
 		31DBD11D2CCA2D8300AC5F17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31DBD11B2CCA2D8300AC5F17 /* LaunchScreen.storyboard */; };
 		31DBD1282CCA2D8300AC5F17 /* Cocktail_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1272CCA2D8300AC5F17 /* Cocktail_AppTests.swift */; };
 		31DBD1322CCA2D8300AC5F17 /* Cocktail_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1312CCA2D8300AC5F17 /* Cocktail_AppUITests.swift */; };
 		31DBD1342CCA2D8300AC5F17 /* Cocktail_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1332CCA2D8300AC5F17 /* Cocktail_AppUITestsLaunchTests.swift */; };
+		31DBD1432CCA38D600AC5F17 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1422CCA38D600AC5F17 /* HomeCoordinator.swift */; };
+		31DBD1462CCA39A900AC5F17 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1452CCA39A900AC5F17 /* Coordinator.swift */; };
+		31DBD1482CCA3A4700AC5F17 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1472CCA3A4700AC5F17 /* HomeViewController.swift */; };
+		31DBD14A2CCA3A6E00AC5F17 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1492CCA3A6E00AC5F17 /* HomeViewModel.swift */; };
+		31DBD14C2CCA3B2100AC5F17 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD14B2CCA3B2100AC5F17 /* Configuration.swift */; };
+		31DBD14F2CCA3D5100AC5F17 /* ScreenChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD14E2CCA3D5100AC5F17 /* ScreenChecker.swift */; };
+		31DBD1512CCA40DE00AC5F17 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1502CCA40DE00AC5F17 /* AppCoordinator.swift */; };
+		31DBD1542CCA413100AC5F17 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1532CCA413100AC5F17 /* Application.swift */; };
+		31DBD1562CCA427600AC5F17 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1552CCA427600AC5F17 /* Dependencies.swift */; };
+		31DBD1582CCA429900AC5F17 /* DrinksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1572CCA429900AC5F17 /* DrinksService.swift */; };
+		31DBD15A2CCA452200AC5F17 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1592CCA452200AC5F17 /* AppStyle.swift */; };
+		31DBD15C2CCA45AF00AC5F17 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD15B2CCA45AF00AC5F17 /* UIColor+.swift */; };
+		31DBD15E2CCA485D00AC5F17 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD15D2CCA485D00AC5F17 /* UIImage+.swift */; };
+		31DBD1602CCA4B7700AC5F17 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD15F2CCA4B7700AC5F17 /* UINavigationController+.swift */; };
+		31DBD1A02CCBDAE200AC5F17 /* VCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD19F2CCBDAE200AC5F17 /* VCViewModel.swift */; };
+		31DBD1A22CCBDD2200AC5F17 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1A12CCBDD2200AC5F17 /* BaseViewController.swift */; };
+		31DBD1A52CCC162400AC5F17 /* DrinkSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1A42CCC162400AC5F17 /* DrinkSearchViewController.swift */; };
+		31DBD1A72CCC169B00AC5F17 /* DrinkSearchCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1A62CCC169B00AC5F17 /* DrinkSearchCollectionViewManager.swift */; };
+		31DBD1AA2CCC16E600AC5F17 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1A92CCC16E600AC5F17 /* Drink.swift */; };
+		31DBD1AC2CCC179B00AC5F17 /* DrinkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1AB2CCC179B00AC5F17 /* DrinkCollectionViewCell.swift */; };
+		31DBD1AE2CCC182000AC5F17 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1AD2CCC182000AC5F17 /* UIImageView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +61,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3134A5652CCCEB1800FBCD9C /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		3134A5672CCCF38000FBCD9C /* UISearchBar+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+.swift"; sourceTree = "<group>"; };
+		3134A5732CCCFCD100FBCD9C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		3134A5772CCD12F200FBCD9C /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		3134A5792CCD131E00FBCD9C /* Publisher+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+.swift"; sourceTree = "<group>"; };
 		31DBD10D2CCA2D8000AC5F17 /* Cocktail App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cocktail App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DBD1102CCA2D8000AC5F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31DBD1122CCA2D8000AC5F17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		31DBD1142CCA2D8000AC5F17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		31DBD1172CCA2D8000AC5F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		31DBD1142CCA2D8000AC5F17 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		31DBD1192CCA2D8300AC5F17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31DBD11C2CCA2D8300AC5F17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31DBD11E2CCA2D8300AC5F17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +78,27 @@
 		31DBD12D2CCA2D8300AC5F17 /* Cocktail AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cocktail AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DBD1312CCA2D8300AC5F17 /* Cocktail_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail_AppUITests.swift; sourceTree = "<group>"; };
 		31DBD1332CCA2D8300AC5F17 /* Cocktail_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cocktail_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		31DBD1422CCA38D600AC5F17 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		31DBD1452CCA39A900AC5F17 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		31DBD1472CCA3A4700AC5F17 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		31DBD1492CCA3A6E00AC5F17 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		31DBD14B2CCA3B2100AC5F17 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		31DBD14E2CCA3D5100AC5F17 /* ScreenChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenChecker.swift; sourceTree = "<group>"; };
+		31DBD1502CCA40DE00AC5F17 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		31DBD1532CCA413100AC5F17 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		31DBD1552CCA427600AC5F17 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
+		31DBD1572CCA429900AC5F17 /* DrinksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksService.swift; sourceTree = "<group>"; };
+		31DBD1592CCA452200AC5F17 /* AppStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
+		31DBD15B2CCA45AF00AC5F17 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
+		31DBD15D2CCA485D00AC5F17 /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		31DBD15F2CCA4B7700AC5F17 /* UINavigationController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+.swift"; sourceTree = "<group>"; };
+		31DBD19F2CCBDAE200AC5F17 /* VCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCViewModel.swift; sourceTree = "<group>"; };
+		31DBD1A12CCBDD2200AC5F17 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		31DBD1A42CCC162400AC5F17 /* DrinkSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkSearchViewController.swift; sourceTree = "<group>"; };
+		31DBD1A62CCC169B00AC5F17 /* DrinkSearchCollectionViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkSearchCollectionViewManager.swift; sourceTree = "<group>"; };
+		31DBD1A92CCC16E600AC5F17 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		31DBD1AB2CCC179B00AC5F17 /* DrinkCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCollectionViewCell.swift; sourceTree = "<group>"; };
+		31DBD1AD2CCC182000AC5F17 /* UIImageView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +126,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3134A5722CCCFCC700FBCD9C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3134A5732CCCFCD100FBCD9C /* NetworkService.swift */,
+				3134A5772CCD12F200FBCD9C /* Resource.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		31DBD1042CCA2D8000AC5F17 = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +158,12 @@
 		31DBD10F2CCA2D8000AC5F17 /* Cocktail App */ = {
 			isa = PBXGroup;
 			children = (
+				31DBD1A82CCC16D600AC5F17 /* Model */,
+				31DBD1442CCA399B00AC5F17 /* Common */,
+				31DBD1412CCA385E00AC5F17 /* Home */,
 				31DBD1102CCA2D8000AC5F17 /* AppDelegate.swift */,
+				31DBD1502CCA40DE00AC5F17 /* AppCoordinator.swift */,
 				31DBD1122CCA2D8000AC5F17 /* SceneDelegate.swift */,
-				31DBD1142CCA2D8000AC5F17 /* ViewController.swift */,
-				31DBD1162CCA2D8000AC5F17 /* Main.storyboard */,
 				31DBD1192CCA2D8300AC5F17 /* Assets.xcassets */,
 				31DBD11B2CCA2D8300AC5F17 /* LaunchScreen.storyboard */,
 				31DBD11E2CCA2D8300AC5F17 /* Info.plist */,
@@ -125,6 +186,76 @@
 				31DBD1332CCA2D8300AC5F17 /* Cocktail_AppUITestsLaunchTests.swift */,
 			);
 			path = "Cocktail AppUITests";
+			sourceTree = "<group>";
+		};
+		31DBD1412CCA385E00AC5F17 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				31DBD1A32CCC161300AC5F17 /* Search */,
+				31DBD1422CCA38D600AC5F17 /* HomeCoordinator.swift */,
+				31DBD1472CCA3A4700AC5F17 /* HomeViewController.swift */,
+				31DBD1492CCA3A6E00AC5F17 /* HomeViewModel.swift */,
+				31DBD1142CCA2D8000AC5F17 /* SplashViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		31DBD1442CCA399B00AC5F17 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3134A5722CCCFCC700FBCD9C /* Networking */,
+				31DBD1522CCA412300AC5F17 /* Services */,
+				31DBD14D2CCA3D4700AC5F17 /* Misc */,
+				31DBD1452CCA39A900AC5F17 /* Coordinator.swift */,
+				31DBD14B2CCA3B2100AC5F17 /* Configuration.swift */,
+				31DBD1592CCA452200AC5F17 /* AppStyle.swift */,
+				31DBD19F2CCBDAE200AC5F17 /* VCViewModel.swift */,
+				31DBD1A12CCBDD2200AC5F17 /* BaseViewController.swift */,
+				3134A5792CCD131E00FBCD9C /* Publisher+.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		31DBD14D2CCA3D4700AC5F17 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				31DBD14E2CCA3D5100AC5F17 /* ScreenChecker.swift */,
+				31DBD15B2CCA45AF00AC5F17 /* UIColor+.swift */,
+				31DBD15D2CCA485D00AC5F17 /* UIImage+.swift */,
+				31DBD15F2CCA4B7700AC5F17 /* UINavigationController+.swift */,
+				31DBD1AD2CCC182000AC5F17 /* UIImageView+.swift */,
+				3134A5652CCCEB1800FBCD9C /* Reusable.swift */,
+				3134A5672CCCF38000FBCD9C /* UISearchBar+.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		31DBD1522CCA412300AC5F17 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				31DBD1532CCA413100AC5F17 /* Application.swift */,
+				31DBD1552CCA427600AC5F17 /* Dependencies.swift */,
+				31DBD1572CCA429900AC5F17 /* DrinksService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		31DBD1A32CCC161300AC5F17 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				31DBD1A42CCC162400AC5F17 /* DrinkSearchViewController.swift */,
+				31DBD1A62CCC169B00AC5F17 /* DrinkSearchCollectionViewManager.swift */,
+				31DBD1AB2CCC179B00AC5F17 /* DrinkCollectionViewCell.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		31DBD1A82CCC16D600AC5F17 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				31DBD1A92CCC16E600AC5F17 /* Drink.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +364,6 @@
 			files = (
 				31DBD11D2CCA2D8300AC5F17 /* LaunchScreen.storyboard in Resources */,
 				31DBD11A2CCA2D8300AC5F17 /* Assets.xcassets in Resources */,
-				31DBD1182CCA2D8000AC5F17 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +388,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31DBD1152CCA2D8000AC5F17 /* ViewController.swift in Sources */,
+				31DBD1602CCA4B7700AC5F17 /* UINavigationController+.swift in Sources */,
+				31DBD1562CCA427600AC5F17 /* Dependencies.swift in Sources */,
+				31DBD1A72CCC169B00AC5F17 /* DrinkSearchCollectionViewManager.swift in Sources */,
+				31DBD1152CCA2D8000AC5F17 /* SplashViewController.swift in Sources */,
+				3134A5662CCCEB1800FBCD9C /* Reusable.swift in Sources */,
+				3134A5742CCCFCD100FBCD9C /* NetworkService.swift in Sources */,
+				31DBD1432CCA38D600AC5F17 /* HomeCoordinator.swift in Sources */,
+				31DBD1A22CCBDD2200AC5F17 /* BaseViewController.swift in Sources */,
+				31DBD1542CCA413100AC5F17 /* Application.swift in Sources */,
+				31DBD1512CCA40DE00AC5F17 /* AppCoordinator.swift in Sources */,
+				31DBD15E2CCA485D00AC5F17 /* UIImage+.swift in Sources */,
+				31DBD14A2CCA3A6E00AC5F17 /* HomeViewModel.swift in Sources */,
+				3134A57A2CCD131E00FBCD9C /* Publisher+.swift in Sources */,
+				31DBD1462CCA39A900AC5F17 /* Coordinator.swift in Sources */,
+				3134A5782CCD12F200FBCD9C /* Resource.swift in Sources */,
+				31DBD1582CCA429900AC5F17 /* DrinksService.swift in Sources */,
+				31DBD1AE2CCC182000AC5F17 /* UIImageView+.swift in Sources */,
+				31DBD1AC2CCC179B00AC5F17 /* DrinkCollectionViewCell.swift in Sources */,
+				31DBD1A52CCC162400AC5F17 /* DrinkSearchViewController.swift in Sources */,
 				31DBD1112CCA2D8000AC5F17 /* AppDelegate.swift in Sources */,
+				31DBD1AA2CCC16E600AC5F17 /* Drink.swift in Sources */,
+				31DBD1A02CCBDAE200AC5F17 /* VCViewModel.swift in Sources */,
+				31DBD15A2CCA452200AC5F17 /* AppStyle.swift in Sources */,
 				31DBD1132CCA2D8000AC5F17 /* SceneDelegate.swift in Sources */,
+				3134A5682CCCF38000FBCD9C /* UISearchBar+.swift in Sources */,
+				31DBD14C2CCA3B2100AC5F17 /* Configuration.swift in Sources */,
+				31DBD1482CCA3A4700AC5F17 /* HomeViewController.swift in Sources */,
+				31DBD14F2CCA3D5100AC5F17 /* ScreenChecker.swift in Sources */,
+				31DBD15C2CCA45AF00AC5F17 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +453,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		31DBD1162CCA2D8000AC5F17 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				31DBD1172CCA2D8000AC5F17 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		31DBD11B2CCA2D8300AC5F17 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,10 +594,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Cocktail App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -474,10 +623,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Cocktail App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
