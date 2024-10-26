@@ -24,6 +24,7 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         generateSubviews(viewModel: viewModel)
         configure(viewModel: viewModel)
+        bind(viewModel: viewModel)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,6 +35,10 @@ class BaseViewController: UIViewController {
         view.backgroundColor = viewModel.backgroundColor
         navigationItem.setHidesBackButton(viewModel.hidesBackButton, animated: false)
         navigationItem.title = viewModel.title
+    }
+    
+    func bind(viewModel: VCViewModel) {
+        
     }
 
     func generateSubviews(viewModel: VCViewModel) {

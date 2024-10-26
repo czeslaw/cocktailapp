@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DependenciesProvidable: AnyObject {
-    func dependencies(with environment: Configuration.Environment) -> Dependencies
+    static func dependencies(with environment: Configuration.Environment) -> Dependencies
 }
 
 struct Dependencies {

@@ -15,7 +15,8 @@ class AppCoordinator: NSObject, Coordinator {
     var coordinators: [Coordinator] = []
     
     private lazy var homeCoordinator: HomeCoordinator = {
-        let homeCoordinator = HomeCoordinator(navigationController: navigationController)
+        let homeCoordinator = HomeCoordinator(navigationController: navigationController, 
+                                              drinksService: application.dependencies.drinksService)
         return homeCoordinator
     }()
     

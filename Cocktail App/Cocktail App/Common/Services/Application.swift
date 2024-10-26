@@ -9,16 +9,19 @@ import Foundation
 import Combine
 
 class Application {
-    private var cancelable = Set<AnyCancellable>()
-    private let dependencies: [Dependencies] = []
+    let dependencies: Dependencies
     
     static let shared: Application = {
         Application()
     }()
+    
+    init() {
+        dependencies = Application.dependencies(with: Configuration.Environment.dev)
+    }
 }
 
 extension Application: DependenciesProvidable {
-    func dependencies(with environment: Configuration.Environment) -> Dependencies {
+    internal static func dependencies(with environment: Configuration.Environment) -> Dependencies {
         switch environment {
         case .dev:
             return Dependencies(drinksService: DrinksService())

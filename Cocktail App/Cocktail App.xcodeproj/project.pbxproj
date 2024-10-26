@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		3134A5662CCCEB1800FBCD9C /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5652CCCEB1800FBCD9C /* Reusable.swift */; };
+		3134A5682CCCF38000FBCD9C /* UISearchBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5672CCCF38000FBCD9C /* UISearchBar+.swift */; };
+		3134A5742CCCFCD100FBCD9C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5732CCCFCD100FBCD9C /* NetworkService.swift */; };
+		3134A5782CCD12F200FBCD9C /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5772CCD12F200FBCD9C /* Resource.swift */; };
+		3134A57A2CCD131E00FBCD9C /* Publisher+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5792CCD131E00FBCD9C /* Publisher+.swift */; };
 		31DBD1112CCA2D8000AC5F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1102CCA2D8000AC5F17 /* AppDelegate.swift */; };
 		31DBD1132CCA2D8000AC5F17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1122CCA2D8000AC5F17 /* SceneDelegate.swift */; };
 		31DBD1152CCA2D8000AC5F17 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1142CCA2D8000AC5F17 /* SplashViewController.swift */; };
@@ -58,6 +62,10 @@
 
 /* Begin PBXFileReference section */
 		3134A5652CCCEB1800FBCD9C /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		3134A5672CCCF38000FBCD9C /* UISearchBar+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+.swift"; sourceTree = "<group>"; };
+		3134A5732CCCFCD100FBCD9C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		3134A5772CCD12F200FBCD9C /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		3134A5792CCD131E00FBCD9C /* Publisher+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+.swift"; sourceTree = "<group>"; };
 		31DBD10D2CCA2D8000AC5F17 /* Cocktail App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cocktail App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DBD1102CCA2D8000AC5F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31DBD1122CCA2D8000AC5F17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -118,6 +126,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3134A5722CCCFCC700FBCD9C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3134A5732CCCFCD100FBCD9C /* NetworkService.swift */,
+				3134A5772CCD12F200FBCD9C /* Resource.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		31DBD1042CCA2D8000AC5F17 = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +203,7 @@
 		31DBD1442CCA399B00AC5F17 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				3134A5722CCCFCC700FBCD9C /* Networking */,
 				31DBD1522CCA412300AC5F17 /* Services */,
 				31DBD14D2CCA3D4700AC5F17 /* Misc */,
 				31DBD1452CCA39A900AC5F17 /* Coordinator.swift */,
@@ -193,6 +211,7 @@
 				31DBD1592CCA452200AC5F17 /* AppStyle.swift */,
 				31DBD19F2CCBDAE200AC5F17 /* VCViewModel.swift */,
 				31DBD1A12CCBDD2200AC5F17 /* BaseViewController.swift */,
+				3134A5792CCD131E00FBCD9C /* Publisher+.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -206,6 +225,7 @@
 				31DBD15F2CCA4B7700AC5F17 /* UINavigationController+.swift */,
 				31DBD1AD2CCC182000AC5F17 /* UIImageView+.swift */,
 				3134A5652CCCEB1800FBCD9C /* Reusable.swift */,
+				3134A5672CCCF38000FBCD9C /* UISearchBar+.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -373,13 +393,16 @@
 				31DBD1A72CCC169B00AC5F17 /* DrinkSearchCollectionViewManager.swift in Sources */,
 				31DBD1152CCA2D8000AC5F17 /* SplashViewController.swift in Sources */,
 				3134A5662CCCEB1800FBCD9C /* Reusable.swift in Sources */,
+				3134A5742CCCFCD100FBCD9C /* NetworkService.swift in Sources */,
 				31DBD1432CCA38D600AC5F17 /* HomeCoordinator.swift in Sources */,
 				31DBD1A22CCBDD2200AC5F17 /* BaseViewController.swift in Sources */,
 				31DBD1542CCA413100AC5F17 /* Application.swift in Sources */,
 				31DBD1512CCA40DE00AC5F17 /* AppCoordinator.swift in Sources */,
 				31DBD15E2CCA485D00AC5F17 /* UIImage+.swift in Sources */,
 				31DBD14A2CCA3A6E00AC5F17 /* HomeViewModel.swift in Sources */,
+				3134A57A2CCD131E00FBCD9C /* Publisher+.swift in Sources */,
 				31DBD1462CCA39A900AC5F17 /* Coordinator.swift in Sources */,
+				3134A5782CCD12F200FBCD9C /* Resource.swift in Sources */,
 				31DBD1582CCA429900AC5F17 /* DrinksService.swift in Sources */,
 				31DBD1AE2CCC182000AC5F17 /* UIImageView+.swift in Sources */,
 				31DBD1AC2CCC179B00AC5F17 /* DrinkCollectionViewCell.swift in Sources */,
@@ -389,6 +412,7 @@
 				31DBD1A02CCBDAE200AC5F17 /* VCViewModel.swift in Sources */,
 				31DBD15A2CCA452200AC5F17 /* AppStyle.swift in Sources */,
 				31DBD1132CCA2D8000AC5F17 /* SceneDelegate.swift in Sources */,
+				3134A5682CCCF38000FBCD9C /* UISearchBar+.swift in Sources */,
 				31DBD14C2CCA3B2100AC5F17 /* Configuration.swift in Sources */,
 				31DBD1482CCA3A4700AC5F17 /* HomeViewController.swift in Sources */,
 				31DBD14F2CCA3D5100AC5F17 /* ScreenChecker.swift in Sources */,

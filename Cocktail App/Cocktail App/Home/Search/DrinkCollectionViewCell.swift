@@ -96,8 +96,12 @@ class DrinkCollectionViewCell: UICollectionViewCell, Reusable {
     }
     
     func reuse(drink: Drink) {
-        titleLabel.text = drink.title
+        titleLabel.text = drink.strDrink
         imageTask?.cancel()
-//        imageTask = imageView.imageFromURL(url: drink.posterUrl)
+        guard let urlString = drink.strDrinkThumb,
+              let url = URL(string: urlString) else {
+            return
+        }
+        imageTask = imageView.imageFromURL(url: url)
     }
 }
