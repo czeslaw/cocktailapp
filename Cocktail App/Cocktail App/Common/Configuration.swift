@@ -93,6 +93,9 @@ enum Images {
     static var logotype: UIImage? {
         return UIImage(named: "logotype")
     }
+    static var drinkPlaceholder: UIImage? {
+        return UIImage(named: "drinkPlaceholder")
+    }
 }
 
 enum AnimationDurations {
@@ -107,5 +110,25 @@ enum AnimationDurations {
     }
     static var longAnimationDuration: TimeInterval {
         return 0.85
+    }
+}
+
+enum CollectionViewStylingType {
+    case drink
+    
+    var styling: CollectionViewStyling {
+        return CollectionViewStyling(inset: 5,
+                                     minimumLineSpacing: 5,
+                                     minimumInteritemSpacing: 5,
+                                     cellsPerRow: 3,
+                                     itemHeight: 240)
+    }
+    
+    struct CollectionViewStyling {
+        let inset: CGFloat
+        let minimumLineSpacing: CGFloat
+        let minimumInteritemSpacing: CGFloat
+        let cellsPerRow: Int
+        let itemHeight: CGFloat
     }
 }
