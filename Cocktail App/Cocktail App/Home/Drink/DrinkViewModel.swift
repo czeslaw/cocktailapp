@@ -28,7 +28,7 @@ class DrinkViewModel: VCViewModel {
     }
     
     var rightBarButtonItemImage: UIImage? {
-        return UIImage(systemName: "square.and.arrow.up")
+        return UIImage(systemName: "square.and.arrow.up")?.withRenderingMode(.alwaysTemplate)
     }
     
     init(drink: Drink,

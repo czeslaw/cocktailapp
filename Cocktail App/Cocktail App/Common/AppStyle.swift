@@ -16,6 +16,7 @@ func applyStyle() {
     UINavigationBar.appearance().compactAppearance = UINavigationBarAppearance.defaultAppearence
     UINavigationBar.appearance().standardAppearance = UINavigationBarAppearance.defaultAppearence
     UINavigationBar.appearance().scrollEdgeAppearance = UINavigationBarAppearance.defaultAppearence
+    UINavigationBar.appearance().tintColor = Configuration.Color.navigationBarButtonItemTint
 
     //We could have set the backBarButtonItem with an empty title for every view controller. Using appearance here, while a hack is still more convenient though, since we don't have to do it for every view controller instance
     UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffset(horizontal: -200,

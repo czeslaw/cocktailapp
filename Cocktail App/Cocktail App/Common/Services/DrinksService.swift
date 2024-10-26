@@ -27,7 +27,12 @@ class DrinksService: NetworkService {
     func lookupDrink(with identifier: String) -> AnyPublisher<Result<Drink, Error>, Never> {
         return load(Resource<DrinkResponse>.drink(identifier: identifier))
             .map {
-                return .success($0.drink)
+                guard let drinks = $0.drinks,
+                      let drink = drinks.first else {
+                    return .success(Drink.empty)
+                }
+                
+                return .success(drink)
             }
             .catch { error -> AnyPublisher<Result<Drink, Error>, Never> in .just(.failure(error)) }
             .eraseToAnyPublisher()
@@ -39,7 +44,7 @@ struct DrinksResponse: Decodable {
 }
 
 struct DrinkResponse: Decodable {
-    let drink: Drink
+    let drinks: [Drink]?
 }
 
 extension Resource {

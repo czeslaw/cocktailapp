@@ -25,6 +25,12 @@ class DrinkViewController: BaseViewController {
         return imageView
     }()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        onAppear.send()
+    }
+    
     override func bind(viewModel: VCViewModel) {
         let input = DrinkViewModelInput(onAppear: onAppear.eraseToAnyPublisher())
         
