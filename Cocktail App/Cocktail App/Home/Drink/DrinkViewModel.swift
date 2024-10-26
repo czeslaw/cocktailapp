@@ -7,49 +7,74 @@
 
 import Foundation
 import Combine
+import UIKit
 
 struct DrinkViewModelInput {
-    let onAppear: AnyPublisher<Never, Never>
+    let onAppear: AnyPublisher<Void, Never>
 }
 
 struct DrinkViewModelOutput {
-    let viewState: AnyPublisher<HomeViewModel.ViewState, Never>
+    let viewState: AnyPublisher<DrinkViewModel.ViewState, Never>
 }
 
-class HomeViewModel: VCViewModel {
+class DrinkViewModel: VCViewModel {
     private var cancellables: [AnyCancellable] = []
+    private let onPressShare = PassthroughSubject<Void, Never>()
     let drinksService: DrinksService
-    
-    var hidesBackButton: Bool {
-        true
-    }
-    
+    let drink: Drink
+
     var title: String {
-        return "Home"
+        return drink.strDrink ?? "no name"
     }
     
-    init(drinksService: DrinksService) {
+    var rightBarButtonItemImage: UIImage? {
+        return UIImage(systemName: "square.and.arrow.up")
+    }
+    
+    init(drink: Drink,
+         drinksService: DrinksService) {
+        self.drink = drink
         self.drinksService = drinksService
     }
     
-    func transform(input: HomeViewModelInput) -> HomeViewModelOutput {
-        let fetchDrinks = input.onDrinkSearchTextChange
-            .flatMapLatest({ [unowned self] query in drinksService.searchDrinks(with: query) })
-            .map({ result -> HomeViewModel.ViewState in
+    func transform(input: DrinkViewModelInput) -> DrinkViewModelOutput {
+        let fetchDrinks = input.onAppear
+            .flatMapLatest({ [unowned self] query in drinksService.lookupDrink(with: drink.idDrink ?? "") })
+            .map({ result -> DrinkViewModel.ViewState in
                 switch result {
-                case .success(let drinks): return .success(drinks)
+                case .success(let drink): return .success(drink)
                 case .failure(let error): return .failure(error)
                 }
             })
-            .eraseToAnyPublisher()
+        
+        let share = onPressShare
+            .map({ [unowned self] result -> DrinkViewModel.ViewState in
+                return .share(self.drink)
+            })
 
-        return .init(viewState: fetchDrinks)
+        let merge = Publishers.Merge(fetchDrinks, share).removeDuplicates().eraseToAnyPublisher()
+        
+        return .init(viewState: merge)
+    }
+    
+    func rightBarButtonItemAction() {
+        onPressShare.send()
     }
 }
 
-extension HomeViewModel {
-    enum ViewState {
-        case success([Drink])
+extension DrinkViewModel {
+    enum ViewState: Equatable {
+        case success(Drink)
         case failure(Error)
+        case share(Drink)
+        
+        static func == (lhs: DrinkViewModel.ViewState, rhs: DrinkViewModel.ViewState) -> Bool {
+            switch (lhs, rhs) {
+            case (.share, .share): return true
+            case (.success(let lhsDrink), .success(let rhsDrink)): return lhsDrink.idDrink == rhsDrink.idDrink
+            case (.failure, .failure): return true
+            default: return false
+            }
+        }
     }
 }
