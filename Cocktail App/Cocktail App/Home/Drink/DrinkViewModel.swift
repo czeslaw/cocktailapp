@@ -18,11 +18,28 @@ struct DrinkViewModelOutput {
 }
 
 class DrinkViewModel: VCViewModel {
+    struct DrinkCellViewModel {
+        let title: String
+        let detail: String
+        
+        static func create(key: String?, value: Any?) -> DrinkCellViewModel? {
+            guard let key = key,
+                  let value = value as? String else {
+                return nil
+            }
+
+            return DrinkCellViewModel(title: key.replacingOccurrences(of: "str", with: ""),
+                                      detail: value)
+        }
+    }
+    
     private var cancellables: [AnyCancellable] = []
     private let onPressShare = PassthroughSubject<Void, Never>()
     let drinksService: DrinksService
     var drink: Drink
 
+    var cellViewModels = [DrinkCellViewModel]()
+    
     var title: String {
         return drink.strDrink ?? "no name"
     }
@@ -42,8 +59,28 @@ class DrinkViewModel: VCViewModel {
             .flatMapLatest({ [unowned self] query in drinksService.lookupDrink(with: drink.idDrink ?? "") })
             .map({ result -> DrinkViewModel.ViewState in
                 switch result {
-                case .success(let drink): return .success(drink)
-                case .failure(let error): return .failure(error)
+                case .success(let drink): 
+                    
+                    do {
+                        self.cellViewModels.removeAll()
+                        let allProperties = try drink.allProperties()
+
+                        allProperties.keys.sorted { k1, k2 in
+                            return k1.compare(k2) == ComparisonResult.orderedAscending
+                        }
+                        .forEach { key in
+                            if let cell = DrinkCellViewModel.create(key: key, 
+                                                                    value: allProperties[key]) {
+                                self.cellViewModels.append(cell)
+                            }
+                        }
+                    } catch _ {
+
+                    }
+                    
+                    return .success(drink)
+                case .failure(let error):
+                    return .failure(error)
                 }
             })
         

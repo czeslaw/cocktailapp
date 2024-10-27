@@ -13,8 +13,14 @@ protocol DrinkViewControllerDelegate: AnyObject {
 }
 
 class DrinkViewController: BaseViewController {
+    enum DrinkViewControllerSection: Int, CaseIterable {
+        case image = 0
+        case details
+    }
+    
     private var cancelables = Set<AnyCancellable>()
     private let onAppear = PassthroughSubject<Void, Never>()
+    private let imageSize: CGFloat = ScreenChecker.isIPad ? 400 : 200
     
     weak var delegate: DrinkViewControllerDelegate?
 
@@ -22,43 +28,31 @@ class DrinkViewController: BaseViewController {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFit
+        
+        imageView.heightAnchor.constraint(equalToConstant: imageSize).isActive = true
+        imageView.widthAnchor.constraint(equalToConstant: imageSize).isActive = true
+        
         return imageView
     }()
     
-    lazy var stackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.spacing = 20
-        return stackView
-    }()
-    
-    lazy var scrollView: UIScrollView = {
-        let scrollView = UIScrollView()
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        scrollView.showsHorizontalScrollIndicator = false
-
-        scrollView.addSubview(imageView)
-        scrollView.addSubview(stackView)
-
-        stackView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0).isActive = true
-        stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: 0).isActive = true
-        stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 0).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: 0).isActive = true
-
-        return scrollView
+    lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: CGRect.zero, style: UITableView.Style.grouped)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .singleLine
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: UITableViewCell.reuseIdentifier)
+        return tableView
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.addSubview(scrollView)
-        scrollView.backgroundColor = .red
-        
-        scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
-        scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
-        scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
+        view.addSubview(tableView)
+        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -101,23 +95,93 @@ class DrinkViewController: BaseViewController {
             imageView.imageFromURL(url: url)
         }
         
-        stackView.removeAllArrangedSubviews()
-        stackView.addArrangedSubview(imageView)
-        do {
-            let allProperties = try vm.drink.allProperties()
+        tableView.reloadData()
+    }
+}
 
-            allProperties.forEach { (key: String, value: Any) in
-                if let string = value as? String {
-                    let label = UILabel()
-                    label.text = "\(key) \n \(string)"
-                    label.numberOfLines = 2
-                    label.translatesAutoresizingMaskIntoConstraints = false
-                    stackView.addArrangedSubview(label)
-                }
-            }
-            
-        } catch _ {
+extension DrinkViewController: UITableViewDelegate {
+    
+}
 
+extension DrinkViewController: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return DrinkViewControllerSection.allCases.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let section = DrinkViewControllerSection(rawValue: section) else {
+            return 0
         }
+        
+        switch section {
+        case .image:
+            return 0
+        case .details:
+            guard let vm = (viewModel as? DrinkViewModel) else {
+                return 0
+            }
+
+            return vm.cellViewModels.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let section = DrinkViewControllerSection(rawValue: section) else {
+            return nil
+        }
+        
+        switch section {
+        case .image:
+            
+            let view = UIView(frame: CGRect(x: 0,
+                                            y: 0,
+                                            width: imageSize*1.5,
+                                            height: imageSize*1.5))
+            view.addSubview(imageView)
+            
+            view.centerXAnchor.constraint(equalTo: imageView.centerXAnchor).isActive = true
+            view.centerYAnchor.constraint(equalTo: imageView.centerYAnchor).isActive = true
+            
+            return view
+        case .details:
+            return nil
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        guard let section = DrinkViewControllerSection(rawValue: section) else {
+            return 0
+        }
+        switch section {
+        case .image:
+            return imageSize*1.5
+        case .details:
+            return 0
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let vm = (viewModel as? DrinkViewModel),
+              indexPath.row >= 0,
+              indexPath.row < vm.cellViewModels.count else {
+            return UITableViewCell()
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: UITableViewCell.reuseIdentifier, for: indexPath)
+        cell.selectionStyle = .none
+        
+        let cellVM = vm.cellViewModels[indexPath.row]
+        
+        var config = UIListContentConfiguration.subtitleCell()
+        
+        config.text = cellVM.detail
+        config.textProperties.font = Configuration.Font.label
+        
+        config.secondaryText = cellVM.title
+        config.secondaryTextProperties.font = Configuration.Font.text
+        
+        cell.contentConfiguration = config
+        
+        return cell
     }
 }

@@ -17,3 +17,7 @@ extension Reusable {
         return String(describing: self)
     }
 }
+
+extension UITableViewCell: Reusable {
+    
+}
