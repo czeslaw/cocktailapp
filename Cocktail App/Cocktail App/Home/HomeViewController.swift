@@ -17,16 +17,30 @@ class HomeViewController: BaseViewController {
     private let onDrinkSearchTextChange = PassthroughSubject<String, Never>()
     let searchController = UISearchController(searchResultsController: DrinkSearchViewController(collectionViewLayout: UICollectionViewFlowLayout()))
 
+    private lazy var emptyStateLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = String(localized: "home.emptyState")
+        label.font = Configuration.Font.bigLabel
+        label.textColor = Configuration.Color.defaultTextColor
+        label.numberOfLines = 0
+        return label
+    }()
+    
     weak var delegate: HomeViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        searchController.searchBar.placeholder = "Search for Drinks"
+        searchController.searchBar.placeholder = String(localized: "search.placeholder")
         searchController.searchResultsUpdater = self
         (searchController.searchResultsController as? DrinkSearchViewController)?.collectionViewManager.delegate = self
         navigationItem.searchController = searchController
         definesPresentationContext = true
+        
+        view.addSubview(emptyStateLabel)
+        view.centerXAnchor.constraint(equalTo: emptyStateLabel.centerXAnchor).isActive = true
+        view.centerYAnchor.constraint(equalTo: emptyStateLabel.centerYAnchor).isActive = true
     }
     
     override func bind(viewModel: VCViewModel) {

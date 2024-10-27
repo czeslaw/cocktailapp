@@ -41,6 +41,7 @@
 		31012AE82CCE855D00C94378 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1422CCA38D600AC5F17 /* HomeCoordinator.swift */; };
 		31012AE92CCE855D00C94378 /* DrinkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1AB2CCC179B00AC5F17 /* DrinkCollectionViewCell.swift */; };
 		31012AEA2CCE855D00C94378 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1492CCA3A6E00AC5F17 /* HomeViewModel.swift */; };
+		31012AEF2CCEB52A00C94378 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 31012AEE2CCEB52A00C94378 /* Localizable.xcstrings */; };
 		3134A5662CCCEB1800FBCD9C /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5652CCCEB1800FBCD9C /* Reusable.swift */; };
 		3134A5682CCCF38000FBCD9C /* UISearchBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5672CCCF38000FBCD9C /* UISearchBar+.swift */; };
 		3134A5742CCCFCD100FBCD9C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5732CCCFCD100FBCD9C /* NetworkService.swift */; };
@@ -100,6 +101,7 @@
 
 /* Begin PBXFileReference section */
 		31012AA82CCE7DF400C94378 /* ApplicationFlowCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationFlowCoordinatorTests.swift; sourceTree = "<group>"; };
+		31012AEE2CCEB52A00C94378 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		3134A5652CCCEB1800FBCD9C /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		3134A5672CCCF38000FBCD9C /* UISearchBar+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+.swift"; sourceTree = "<group>"; };
 		3134A5732CCCFCD100FBCD9C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -169,6 +171,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31012AED2CCEB50F00C94378 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				31012AEE2CCEB52A00C94378 /* Localizable.xcstrings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		3134A5722CCCFCC700FBCD9C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +220,7 @@
 		31DBD10F2CCA2D8000AC5F17 /* Cocktail App */ = {
 			isa = PBXGroup;
 			children = (
+				31012AED2CCEB50F00C94378 /* Resources */,
 				31DBD1A82CCC16D600AC5F17 /* Model */,
 				31DBD1442CCA399B00AC5F17 /* Common */,
 				31DBD1412CCA385E00AC5F17 /* Home */,
@@ -420,6 +431,7 @@
 			files = (
 				31DBD11D2CCA2D8300AC5F17 /* LaunchScreen.storyboard in Resources */,
 				31DBD11A2CCA2D8300AC5F17 /* Assets.xcassets in Resources */,
+				31012AEF2CCEB52A00C94378 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
