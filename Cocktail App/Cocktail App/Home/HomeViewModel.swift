@@ -25,7 +25,7 @@ class HomeViewModel: VCViewModel {
     }
     
     var title: String {
-        return "Home"
+        return String(localized: "title.home")
     }
     
     init(drinksService: DrinksService) {
