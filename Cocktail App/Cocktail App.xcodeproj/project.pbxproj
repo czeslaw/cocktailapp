@@ -12,6 +12,10 @@
 		3134A5742CCCFCD100FBCD9C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5732CCCFCD100FBCD9C /* NetworkService.swift */; };
 		3134A5782CCD12F200FBCD9C /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5772CCD12F200FBCD9C /* Resource.swift */; };
 		3134A57A2CCD131E00FBCD9C /* Publisher+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5792CCD131E00FBCD9C /* Publisher+.swift */; };
+		3134A5882CCD383D00FBCD9C /* DrinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5862CCD383D00FBCD9C /* DrinkViewModel.swift */; };
+		3134A5892CCD383D00FBCD9C /* DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5872CCD383D00FBCD9C /* DrinkViewController.swift */; };
+		3134A58B2CCD6BD500FBCD9C /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A58A2CCD6BD500FBCD9C /* UIStackView+.swift */; };
+		3134A58D2CCD6C2A00FBCD9C /* PropertyLoopable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A58C2CCD6C2A00FBCD9C /* PropertyLoopable.swift */; };
 		31DBD1112CCA2D8000AC5F17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1102CCA2D8000AC5F17 /* AppDelegate.swift */; };
 		31DBD1132CCA2D8000AC5F17 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1122CCA2D8000AC5F17 /* SceneDelegate.swift */; };
 		31DBD1152CCA2D8000AC5F17 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1142CCA2D8000AC5F17 /* SplashViewController.swift */; };
@@ -66,6 +70,10 @@
 		3134A5732CCCFCD100FBCD9C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		3134A5772CCD12F200FBCD9C /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		3134A5792CCD131E00FBCD9C /* Publisher+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+.swift"; sourceTree = "<group>"; };
+		3134A5862CCD383D00FBCD9C /* DrinkViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkViewModel.swift; sourceTree = "<group>"; };
+		3134A5872CCD383D00FBCD9C /* DrinkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrinkViewController.swift; sourceTree = "<group>"; };
+		3134A58A2CCD6BD500FBCD9C /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		3134A58C2CCD6C2A00FBCD9C /* PropertyLoopable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyLoopable.swift; sourceTree = "<group>"; };
 		31DBD10D2CCA2D8000AC5F17 /* Cocktail App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cocktail App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31DBD1102CCA2D8000AC5F17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31DBD1122CCA2D8000AC5F17 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +143,15 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		3134A5852CCD383D00FBCD9C /* Drink */ = {
+			isa = PBXGroup;
+			children = (
+				3134A5862CCD383D00FBCD9C /* DrinkViewModel.swift */,
+				3134A5872CCD383D00FBCD9C /* DrinkViewController.swift */,
+			);
+			path = Drink;
+			sourceTree = "<group>";
+		};
 		31DBD1042CCA2D8000AC5F17 = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +208,7 @@
 		31DBD1412CCA385E00AC5F17 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				3134A5852CCD383D00FBCD9C /* Drink */,
 				31DBD1A32CCC161300AC5F17 /* Search */,
 				31DBD1422CCA38D600AC5F17 /* HomeCoordinator.swift */,
 				31DBD1472CCA3A4700AC5F17 /* HomeViewController.swift */,
@@ -226,6 +244,8 @@
 				31DBD1AD2CCC182000AC5F17 /* UIImageView+.swift */,
 				3134A5652CCCEB1800FBCD9C /* Reusable.swift */,
 				3134A5672CCCF38000FBCD9C /* UISearchBar+.swift */,
+				3134A58A2CCD6BD500FBCD9C /* UIStackView+.swift */,
+				3134A58C2CCD6C2A00FBCD9C /* PropertyLoopable.swift */,
 			);
 			path = Misc;
 			sourceTree = "<group>";
@@ -395,6 +415,7 @@
 				3134A5662CCCEB1800FBCD9C /* Reusable.swift in Sources */,
 				3134A5742CCCFCD100FBCD9C /* NetworkService.swift in Sources */,
 				31DBD1432CCA38D600AC5F17 /* HomeCoordinator.swift in Sources */,
+				3134A58B2CCD6BD500FBCD9C /* UIStackView+.swift in Sources */,
 				31DBD1A22CCBDD2200AC5F17 /* BaseViewController.swift in Sources */,
 				31DBD1542CCA413100AC5F17 /* Application.swift in Sources */,
 				31DBD1512CCA40DE00AC5F17 /* AppCoordinator.swift in Sources */,
@@ -406,6 +427,7 @@
 				31DBD1582CCA429900AC5F17 /* DrinksService.swift in Sources */,
 				31DBD1AE2CCC182000AC5F17 /* UIImageView+.swift in Sources */,
 				31DBD1AC2CCC179B00AC5F17 /* DrinkCollectionViewCell.swift in Sources */,
+				3134A58D2CCD6C2A00FBCD9C /* PropertyLoopable.swift in Sources */,
 				31DBD1A52CCC162400AC5F17 /* DrinkSearchViewController.swift in Sources */,
 				31DBD1112CCA2D8000AC5F17 /* AppDelegate.swift in Sources */,
 				31DBD1AA2CCC16E600AC5F17 /* Drink.swift in Sources */,
@@ -413,9 +435,11 @@
 				31DBD15A2CCA452200AC5F17 /* AppStyle.swift in Sources */,
 				31DBD1132CCA2D8000AC5F17 /* SceneDelegate.swift in Sources */,
 				3134A5682CCCF38000FBCD9C /* UISearchBar+.swift in Sources */,
+				3134A5882CCD383D00FBCD9C /* DrinkViewModel.swift in Sources */,
 				31DBD14C2CCA3B2100AC5F17 /* Configuration.swift in Sources */,
 				31DBD1482CCA3A4700AC5F17 /* HomeViewController.swift in Sources */,
 				31DBD14F2CCA3D5100AC5F17 /* ScreenChecker.swift in Sources */,
+				3134A5892CCD383D00FBCD9C /* DrinkViewController.swift in Sources */,
 				31DBD15C2CCA45AF00AC5F17 /* UIColor+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

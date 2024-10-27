@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class BaseViewController: UIViewController {
-    private let viewModel: VCViewModel
+    let viewModel: VCViewModel
     
     init(viewModel: VCViewModel) {
         self.viewModel = viewModel
@@ -29,11 +29,13 @@ class BaseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        navigationItem.rightBarButtonItem = viewModel.rightBarButtonItem
+        navigationItem.setHidesBackButton(viewModel.hidesBackButton, animated: false)
     }
     
     func configure(viewModel: VCViewModel) {
         view.backgroundColor = viewModel.backgroundColor
-        navigationItem.setHidesBackButton(viewModel.hidesBackButton, animated: false)
         navigationItem.title = viewModel.title
     }
     

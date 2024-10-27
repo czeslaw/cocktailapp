@@ -23,9 +23,27 @@ class DrinksService: NetworkService {
             .catch { error -> AnyPublisher<Result<[Drink], Error>, Never> in .just(.failure(error)) }
             .eraseToAnyPublisher()
     }
+    
+    func lookupDrink(with identifier: String) -> AnyPublisher<Result<Drink, Error>, Never> {
+        return load(Resource<DrinkResponse>.drink(identifier: identifier))
+            .map {
+                guard let drinks = $0.drinks,
+                      let drink = drinks.first else {
+                    return .success(Drink.empty)
+                }
+                
+                return .success(drink)
+            }
+            .catch { error -> AnyPublisher<Result<Drink, Error>, Never> in .just(.failure(error)) }
+            .eraseToAnyPublisher()
+    }
 }
 
 struct DrinksResponse: Decodable {
+    let drinks: [Drink]?
+}
+
+struct DrinkResponse: Decodable {
     let drinks: [Drink]?
 }
 
@@ -37,5 +55,12 @@ extension Resource {
             ]
         return Resource<DrinksResponse>(url: url, parameters: parameters)
     }
+    
+    static func drink(identifier: String) -> Resource<DrinkResponse> {
+        let url = URL(string: Application.shared.environment.rootURL.appending("lookup.php"))!
+        let parameters: [String : CustomStringConvertible] = [
+            "i": identifier,
+        ]
+        return Resource<DrinkResponse>(url: url, parameters: parameters)
+    }
 }
-

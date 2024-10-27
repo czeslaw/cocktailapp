@@ -81,7 +81,7 @@ enum Configuration {
     enum Font {
         static let title = Fonts.semibold(size: ScreenChecker.size(big: 18, small: 14))
         static let text = Fonts.regular(size: ScreenChecker.size(big: 18, small: 14))
-        static let label = Fonts.regular(size: ScreenChecker.size(big: 18, small: 14))
+        static let label = Fonts.bold(size: ScreenChecker.size(big: 24, small: 18))
     }
 }
 

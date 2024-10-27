@@ -52,8 +52,11 @@ class HomeCoordinator: Coordinator {
 }
 
 extension HomeCoordinator: HomeViewControllerDelegate {
-    func onSelect(dring: Drink) {
-        //todo: push drink details vc
+    func onSelect(drink: Drink) {
+        let drinkViewController = DrinkViewController(viewModel: DrinkViewModel(drink: drink,
+                                                                                drinksService: drinksService))
+        drinkViewController.delegate = self
+        navigationController.pushViewController(drinkViewController, animated: true)
     }
     
 }
@@ -61,5 +64,24 @@ extension HomeCoordinator: HomeViewControllerDelegate {
 extension HomeCoordinator: SplashViewControllerDelegate {
     func didFinishAnimating() {
         presentHomeVC()
+    }
+}
+
+extension HomeCoordinator: DrinkViewControllerDelegate {
+    func didPressShare(drink: Drink, image: UIImage?) {
+        var activityItems = [Any]()
+        if let name = drink.strDrink {
+            activityItems.append(name)
+        }
+        if let image = image {
+            activityItems.append(image)
+        }
+        if let url = URL(string: drink.strDrinkThumb ?? "") {
+            activityItems.append(url)
+        }
+
+        let avc = UIActivityViewController(activityItems: activityItems,
+                                           applicationActivities: nil)
+        self.navigationController.present(avc, animated: true)
     }
 }

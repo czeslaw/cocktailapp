@@ -9,7 +9,7 @@ import UIKit
 import Combine
 
 protocol HomeViewControllerDelegate: AnyObject {
-    func onSelect(dring: Drink)
+    func onSelect(drink: Drink)
 }
 
 class HomeViewController: BaseViewController {
@@ -67,6 +67,6 @@ extension HomeViewController: UISearchResultsUpdating {
 
 extension HomeViewController: DrinkSearchCollectionViewManagerDelegate {
     func selected(drink: Drink) {
-        delegate?.onSelect(dring: drink)
+        delegate?.onSelect(drink: drink)
     }
 }
