@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class BaseViewController: UIViewController {
-    private let viewModel: VCViewModel
+    let viewModel: VCViewModel
     
     init(viewModel: VCViewModel) {
         self.viewModel = viewModel

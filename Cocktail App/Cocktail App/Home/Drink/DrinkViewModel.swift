@@ -21,7 +21,7 @@ class DrinkViewModel: VCViewModel {
     private var cancellables: [AnyCancellable] = []
     private let onPressShare = PassthroughSubject<Void, Never>()
     let drinksService: DrinksService
-    let drink: Drink
+    var drink: Drink
 
     var title: String {
         return drink.strDrink ?? "no name"

@@ -25,9 +25,45 @@ class DrinkViewController: BaseViewController {
         return imageView
     }()
     
+    lazy var stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.axis = .vertical
+        stackView.spacing = 20
+        return stackView
+    }()
+    
+    lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.showsHorizontalScrollIndicator = false
+
+        scrollView.addSubview(imageView)
+        scrollView.addSubview(stackView)
+
+        stackView.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 0).isActive = true
+        stackView.widthAnchor.constraint(equalTo: scrollView.widthAnchor, constant: 0).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor, constant: 0).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor, constant: 0).isActive = true
+
+        return scrollView
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.addSubview(scrollView)
+        scrollView.backgroundColor = .red
+        
+        scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+        scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+        scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+
         onAppear.send()
     }
     
@@ -41,7 +77,11 @@ class DrinkViewController: BaseViewController {
             .sink(receiveValue: { [unowned self] state in
                 switch state {
                 case .success(let drink):
-                    print("dsadsa\(drink)")
+                    guard let vm = self.viewModel as? DrinkViewModel else {
+                        break
+                    }
+                    vm.drink = drink
+                    self.generateSubviews(viewModel: viewModel)
                 case .failure(let error):
                     print("error\(error)")
                 case .share(let drink):
@@ -50,14 +90,34 @@ class DrinkViewController: BaseViewController {
                 }
         }).store(in: &cancelables)
     }
-
-    override func configure(viewModel: VCViewModel) {
-        super.configure(viewModel: viewModel)
+    
+    override func generateSubviews(viewModel: VCViewModel) {
+        super.generateSubviews(viewModel: viewModel)
+        
         guard let vm = viewModel as? DrinkViewModel else {
             return
         }
         if let url = URL(string: vm.drink.strDrinkThumb ?? "") {
             imageView.imageFromURL(url: url)
+        }
+        
+        stackView.removeAllArrangedSubviews()
+        stackView.addArrangedSubview(imageView)
+        do {
+            let allProperties = try vm.drink.allProperties()
+
+            allProperties.forEach { (key: String, value: Any) in
+                if let string = value as? String {
+                    let label = UILabel()
+                    label.text = "\(key) \n \(string)"
+                    label.numberOfLines = 2
+                    label.translatesAutoresizingMaskIntoConstraints = false
+                    stackView.addArrangedSubview(label)
+                }
+            }
+            
+        } catch _ {
+
         }
     }
 }

@@ -33,63 +33,15 @@ class DrinkCollectionViewCell: UICollectionViewCell, Reusable {
         addSubview(imageView)
         addSubview(titleLabel)
         
-        addConstraint(NSLayoutConstraint(item: imageView,
-                                         attribute: NSLayoutConstraint.Attribute.leading,
-                                         relatedBy: NSLayoutConstraint.Relation.equal,
-                                         toItem: self,
-                                         attribute: NSLayoutConstraint.Attribute.leading,
-                                         multiplier: 1,
-                                         constant: 0))
-        addConstraint(NSLayoutConstraint(item: imageView,
-                                         attribute: NSLayoutConstraint.Attribute.top,
-                                         relatedBy: NSLayoutConstraint.Relation.equal,
-                                         toItem: self,
-                                         attribute: NSLayoutConstraint.Attribute.top,
-                                         multiplier: 1,
-                                         constant: 0))
-        addConstraint(NSLayoutConstraint(item: imageView,
-                                         attribute: NSLayoutConstraint.Attribute.trailing,
-                                         relatedBy: NSLayoutConstraint.Relation.equal,
-                                         toItem: self,
-                                         attribute: NSLayoutConstraint.Attribute.trailing,
-                                         multiplier: 1,
-                                         constant: 0))
+        topAnchor.constraint(equalTo: imageView.topAnchor, constant: 0).isActive = true
+        leadingAnchor.constraint(equalTo: imageView.leadingAnchor, constant: 0).isActive = true
+        trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 0).isActive = true
+        imageView.bottomAnchor.constraint(equalTo: titleLabel.topAnchor, constant: 0).isActive = true
         
-        addConstraint(NSLayoutConstraint(item: titleLabel,
-                                         attribute: NSLayoutConstraint.Attribute.leading,
-                                         relatedBy: NSLayoutConstraint.Relation.equal,
-                                         toItem: self,
-                                         attribute: NSLayoutConstraint.Attribute.leading,
-                                         multiplier: 1,
-                                         constant: 0))
-        addConstraint(NSLayoutConstraint(item: titleLabel,
-                                         attribute: NSLayoutConstraint.Attribute.top,
-                                         relatedBy: NSLayoutConstraint.Relation.equal,
-                                         toItem: imageView,
-                                         attribute: NSLayoutConstraint.Attribute.bottom,
-                                         multiplier: 1,
-                                         constant: 0))
-        addConstraint(NSLayoutConstraint(item: titleLabel,
-                                         attribute: NSLayoutConstraint.Attribute.trailing,
-                                         relatedBy: NSLayoutConstraint.Relation.equal,
-                                         toItem: self,
-                                         attribute: NSLayoutConstraint.Attribute.trailing,
-                                         multiplier: 1,
-                                         constant: 0))
-        addConstraint(NSLayoutConstraint(item: titleLabel,
-                                         attribute: NSLayoutConstraint.Attribute.bottom,
-                                         relatedBy: NSLayoutConstraint.Relation.equal,
-                                         toItem: self,
-                                         attribute: NSLayoutConstraint.Attribute.bottom,
-                                         multiplier: 1,
-                                         constant: 0))
-        addConstraint(NSLayoutConstraint(item: titleLabel,
-                                         attribute: NSLayoutConstraint.Attribute.height,
-                                         relatedBy: NSLayoutConstraint.Relation.equal,
-                                         toItem: self,
-                                         attribute: NSLayoutConstraint.Attribute.height,
-                                         multiplier: 0.2,
-                                         constant: 0))
+        leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor, constant: 0).isActive = true
+        trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor, constant: 0).isActive = true
+        bottomAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 0).isActive = true
+        heightAnchor.constraint(equalTo: titleLabel.heightAnchor, multiplier: 5).isActive = true
     }
     
     required init?(coder: NSCoder) {

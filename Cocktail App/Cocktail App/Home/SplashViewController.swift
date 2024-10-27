@@ -26,34 +26,11 @@ class SplashViewController: BaseViewController {
         super.viewDidLoad()
 
         view.addSubview(imageView)
-        view.addConstraint(NSLayoutConstraint(item: imageView,
-                                              attribute: NSLayoutConstraint.Attribute.centerY,
-                                              relatedBy: NSLayoutConstraint.Relation.equal,
-                                              toItem: view,
-                                              attribute: NSLayoutConstraint.Attribute.centerY,
-                                              multiplier: 1,
-                                              constant: 0))
-        view.addConstraint(NSLayoutConstraint(item: imageView,
-                                              attribute: NSLayoutConstraint.Attribute.width,
-                                              relatedBy: NSLayoutConstraint.Relation.equal,
-                                              toItem: imageView,
-                                              attribute: NSLayoutConstraint.Attribute.height,
-                                              multiplier: 1,
-                                              constant: 0))
-        view.addConstraint(NSLayoutConstraint(item: imageView,
-                                              attribute: NSLayoutConstraint.Attribute.leading,
-                                              relatedBy: NSLayoutConstraint.Relation.equal,
-                                              toItem: view,
-                                              attribute: NSLayoutConstraint.Attribute.leading,
-                                              multiplier: 1,
-                                              constant: 96))
-        view.addConstraint(NSLayoutConstraint(item: imageView,
-                                              attribute: NSLayoutConstraint.Attribute.trailing,
-                                              relatedBy: NSLayoutConstraint.Relation.equal,
-                                              toItem: view,
-                                              attribute: NSLayoutConstraint.Attribute.trailing,
-                                              multiplier: 1,
-                                              constant: -96))
+        
+        view.centerYAnchor.constraint(equalTo: imageView.centerYAnchor, constant: 0).isActive = true
+        view.leadingAnchor.constraint(equalTo: imageView.leadingAnchor, constant: -96).isActive = true
+        view.trailingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 96).isActive = true
+        imageView.widthAnchor.constraint(equalTo: imageView.heightAnchor, constant: 0).isActive = true
     }
 
     override func viewDidAppear(_ animated: Bool) {
