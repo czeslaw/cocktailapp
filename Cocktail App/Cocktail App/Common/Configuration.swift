@@ -133,8 +133,8 @@ enum CollectionViewStylingType {
             return CollectionViewStyling(inset: 5,
                                          minimumLineSpacing: 5,
                                          minimumInteritemSpacing: 5,
-                                         cellsPerRow: ScreenChecker.isIPad ? 7 : 3,
-                                         itemHeight: ScreenChecker.isIPad ? 300 : 180)
+                                         cellsPerRow: ScreenChecker.isIPad ? 5 : 3,
+                                         itemHeight: ScreenChecker.isIPad ? 222 : 180)
         }
     }
     
