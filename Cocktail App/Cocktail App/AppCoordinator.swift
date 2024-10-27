@@ -21,10 +21,8 @@ class AppCoordinator: NSObject, Coordinator {
     }()
     
     init(application: Application,
-         windowScene: UIWindowScene) {
-        
-        let window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        window.windowScene = windowScene
+         window: UIWindow) {
+
         let navigationController: UINavigationController = .withOverridenBarAppearence()
         navigationController.view.backgroundColor = Configuration.Color.defaultViewBackground
         
