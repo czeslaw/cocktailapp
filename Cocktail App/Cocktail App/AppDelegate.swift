@@ -11,7 +11,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     private var application: Application!
     private var appCoordinator: AppCoordinator!
-    var windowScene: UIWindowScene? {
+    var window: UIWindow? {
         didSet {
             start()
         }
@@ -24,13 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func start() {
-        guard let scene = windowScene else {
+        guard let window = window else {
             return
         }
         
         self.application = Application.shared
         self.appCoordinator = AppCoordinator(application: self.application,
-                                             windowScene: scene)
+                                             window: window)
 
         applyStyle()
         appCoordinator.start()

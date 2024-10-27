@@ -17,7 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         
-        appDelegate.windowScene = windowScene
+        
+        let window = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window.windowScene = windowScene
+        appDelegate.window = window
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

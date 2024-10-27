@@ -7,6 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31012AA92CCE7DF400C94378 /* ApplicationFlowCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31012AA82CCE7DF400C94378 /* ApplicationFlowCoordinatorTests.swift */; };
+		31012AB42CCE844400C94378 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1A92CCC16E600AC5F17 /* Drink.swift */; };
+		31012ABE2CCE854C00C94378 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5732CCCFCD100FBCD9C /* NetworkService.swift */; };
+		31012ABF2CCE854C00C94378 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5772CCD12F200FBCD9C /* Resource.swift */; };
+		31012AC02CCE854F00C94378 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1532CCA413100AC5F17 /* Application.swift */; };
+		31012AC12CCE854F00C94378 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1552CCA427600AC5F17 /* Dependencies.swift */; };
+		31012AC22CCE854F00C94378 /* DrinksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1572CCA429900AC5F17 /* DrinksService.swift */; };
+		31012ACB2CCE855300C94378 /* UINavigationController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD15F2CCA4B7700AC5F17 /* UINavigationController+.swift */; };
+		31012ACC2CCE855300C94378 /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD15D2CCA485D00AC5F17 /* UIImage+.swift */; };
+		31012ACD2CCE855300C94378 /* PropertyLoopable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A58C2CCD6C2A00FBCD9C /* PropertyLoopable.swift */; };
+		31012ACE2CCE855300C94378 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1A12CCBDD2200AC5F17 /* BaseViewController.swift */; };
+		31012ACF2CCE855300C94378 /* VCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD19F2CCBDAE200AC5F17 /* VCViewModel.swift */; };
+		31012AD02CCE855300C94378 /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1592CCA452200AC5F17 /* AppStyle.swift */; };
+		31012AD12CCE855300C94378 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A58A2CCD6BD500FBCD9C /* UIStackView+.swift */; };
+		31012AD22CCE855300C94378 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD15B2CCA45AF00AC5F17 /* UIColor+.swift */; };
+		31012AD32CCE855300C94378 /* UISearchBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5672CCCF38000FBCD9C /* UISearchBar+.swift */; };
+		31012AD42CCE855300C94378 /* Publisher+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5792CCD131E00FBCD9C /* Publisher+.swift */; };
+		31012AD52CCE855300C94378 /* ScreenChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD14E2CCA3D5100AC5F17 /* ScreenChecker.swift */; };
+		31012AD62CCE855300C94378 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5652CCCEB1800FBCD9C /* Reusable.swift */; };
+		31012AD72CCE855300C94378 /* UIImageView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1AD2CCC182000AC5F17 /* UIImageView+.swift */; };
+		31012AD82CCE855300C94378 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD14B2CCA3B2100AC5F17 /* Configuration.swift */; };
+		31012AD92CCE855300C94378 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1452CCA39A900AC5F17 /* Coordinator.swift */; };
+		31012ADA2CCE855800C94378 /* DrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5872CCD383D00FBCD9C /* DrinkViewController.swift */; };
+		31012ADB2CCE855800C94378 /* DrinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5862CCD383D00FBCD9C /* DrinkViewModel.swift */; };
+		31012AE12CCE855D00C94378 /* DrinkSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1A42CCC162400AC5F17 /* DrinkSearchViewController.swift */; };
+		31012AE22CCE855D00C94378 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1102CCA2D8000AC5F17 /* AppDelegate.swift */; };
+		31012AE32CCE855D00C94378 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1502CCA40DE00AC5F17 /* AppCoordinator.swift */; };
+		31012AE42CCE855D00C94378 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1122CCA2D8000AC5F17 /* SceneDelegate.swift */; };
+		31012AE52CCE855D00C94378 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1472CCA3A4700AC5F17 /* HomeViewController.swift */; };
+		31012AE62CCE855D00C94378 /* DrinkSearchCollectionViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1A62CCC169B00AC5F17 /* DrinkSearchCollectionViewManager.swift */; };
+		31012AE72CCE855D00C94378 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1142CCA2D8000AC5F17 /* SplashViewController.swift */; };
+		31012AE82CCE855D00C94378 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1422CCA38D600AC5F17 /* HomeCoordinator.swift */; };
+		31012AE92CCE855D00C94378 /* DrinkCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1AB2CCC179B00AC5F17 /* DrinkCollectionViewCell.swift */; };
+		31012AEA2CCE855D00C94378 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBD1492CCA3A6E00AC5F17 /* HomeViewModel.swift */; };
 		3134A5662CCCEB1800FBCD9C /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5652CCCEB1800FBCD9C /* Reusable.swift */; };
 		3134A5682CCCF38000FBCD9C /* UISearchBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5672CCCF38000FBCD9C /* UISearchBar+.swift */; };
 		3134A5742CCCFCD100FBCD9C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3134A5732CCCFCD100FBCD9C /* NetworkService.swift */; };
@@ -65,6 +99,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		31012AA82CCE7DF400C94378 /* ApplicationFlowCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationFlowCoordinatorTests.swift; sourceTree = "<group>"; };
 		3134A5652CCCEB1800FBCD9C /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		3134A5672CCCF38000FBCD9C /* UISearchBar+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+.swift"; sourceTree = "<group>"; };
 		3134A5732CCCFCD100FBCD9C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -192,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				31DBD1272CCA2D8300AC5F17 /* Cocktail_AppTests.swift */,
+				31012AA82CCE7DF400C94378 /* ApplicationFlowCoordinatorTests.swift */,
 			);
 			path = "Cocktail AppTests";
 			sourceTree = "<group>";
@@ -448,7 +484,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31012AC12CCE854F00C94378 /* Dependencies.swift in Sources */,
+				31012AD32CCE855300C94378 /* UISearchBar+.swift in Sources */,
+				31012AD92CCE855300C94378 /* Coordinator.swift in Sources */,
+				31012AC02CCE854F00C94378 /* Application.swift in Sources */,
+				31012ACC2CCE855300C94378 /* UIImage+.swift in Sources */,
+				31012AE52CCE855D00C94378 /* HomeViewController.swift in Sources */,
+				31012AE12CCE855D00C94378 /* DrinkSearchViewController.swift in Sources */,
+				31012ACE2CCE855300C94378 /* BaseViewController.swift in Sources */,
+				31012ABF2CCE854C00C94378 /* Resource.swift in Sources */,
+				31012AD02CCE855300C94378 /* AppStyle.swift in Sources */,
+				31012ACB2CCE855300C94378 /* UINavigationController+.swift in Sources */,
+				31012AD82CCE855300C94378 /* Configuration.swift in Sources */,
+				31012AD42CCE855300C94378 /* Publisher+.swift in Sources */,
+				31012AE42CCE855D00C94378 /* SceneDelegate.swift in Sources */,
+				31012AD62CCE855300C94378 /* Reusable.swift in Sources */,
+				31012ABE2CCE854C00C94378 /* NetworkService.swift in Sources */,
+				31012ADA2CCE855800C94378 /* DrinkViewController.swift in Sources */,
+				31012AE62CCE855D00C94378 /* DrinkSearchCollectionViewManager.swift in Sources */,
+				31012AD72CCE855300C94378 /* UIImageView+.swift in Sources */,
+				31012AB42CCE844400C94378 /* Drink.swift in Sources */,
 				31DBD1282CCA2D8300AC5F17 /* Cocktail_AppTests.swift in Sources */,
+				31012AD22CCE855300C94378 /* UIColor+.swift in Sources */,
+				31012AC22CCE854F00C94378 /* DrinksService.swift in Sources */,
+				31012AEA2CCE855D00C94378 /* HomeViewModel.swift in Sources */,
+				31012AE32CCE855D00C94378 /* AppCoordinator.swift in Sources */,
+				31012ACF2CCE855300C94378 /* VCViewModel.swift in Sources */,
+				31012AE22CCE855D00C94378 /* AppDelegate.swift in Sources */,
+				31012ADB2CCE855800C94378 /* DrinkViewModel.swift in Sources */,
+				31012AD12CCE855300C94378 /* UIStackView+.swift in Sources */,
+				31012AD52CCE855300C94378 /* ScreenChecker.swift in Sources */,
+				31012ACD2CCE855300C94378 /* PropertyLoopable.swift in Sources */,
+				31012AA92CCE7DF400C94378 /* ApplicationFlowCoordinatorTests.swift in Sources */,
+				31012AE72CCE855D00C94378 /* SplashViewController.swift in Sources */,
+				31012AE82CCE855D00C94378 /* HomeCoordinator.swift in Sources */,
+				31012AE92CCE855D00C94378 /* DrinkCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
